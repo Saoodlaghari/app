@@ -2,7 +2,9 @@ import 'package:app/View/Login_Screens/forgot_pass.dart';
 import 'package:app/View/Login_Screens/sign_up.dart';
 import 'package:app/View/bottom_nav_bar.dart';
 import 'package:app/utils/button.dart';
+import 'package:app/utils/colors.dart';
 import 'package:app/utils/heading.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/text_field.dart';
 import 'package:flutter/material.dart';
@@ -23,9 +25,9 @@ class _SignInState extends State<SignIn> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover)),
+                image: AssetImage(Images.customBgImg), fit: BoxFit.cover)),
         child: Container(
           alignment: Alignment.center,
           padding: const EdgeInsets.symmetric(horizontal: 40),
@@ -33,9 +35,8 @@ class _SignInState extends State<SignIn> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              const Center(
-                child: Image(
-                    width: 155, image: AssetImage('assets/images/logo.png')),
+              Center(
+                child: Image(width: 155, image: AssetImage(Images.customLogo)),
               ),
               const SizedBox(
                 height: 40,
@@ -74,7 +75,7 @@ class _SignInState extends State<SignIn> {
                   style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xff934C93)),
+                      color: AppColors.primaryColor),
                 ),
               ),
               const SizedBox(
@@ -106,7 +107,7 @@ class _SignInState extends State<SignIn> {
                       child: const Text("Sign Up",
                           style: TextStyle(
                               fontSize: 14,
-                              color: Color(0xff934C93),
+                              color: AppColors.primaryColor,
                               fontWeight: FontWeight.bold))),
                 ],
               ),

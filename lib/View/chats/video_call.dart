@@ -1,6 +1,6 @@
 import 'package:app/View/chats/message_screen.dart';
+import 'package:app/utils/colors.dart';
 import 'package:app/utils/icon_container_widget.dart';
-import 'package:app/utils/normal_txt.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -21,7 +21,7 @@ class _VideoCallState extends State<VideoCall> {
         backgroundColor: Colors.transparent,
         title: const Text(
           'Video Call',
-          style: TextStyle(fontSize: 16, color: Colors.white),
+          style: TextStyle(fontSize: 16, color: AppColors.white),
         ),
         leading: IconButton(
             onPressed: () {
@@ -37,7 +37,7 @@ class _VideoCallState extends State<VideoCall> {
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.flip_camera_ios_outlined,
                     color: Colors.white,
                     size: 30,
@@ -58,8 +58,9 @@ class _VideoCallState extends State<VideoCall> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Spacer(),
-                Image(width: 180, image: AssetImage('assets/images/man.png')),
-                SizedBox(
+                const Image(
+                    width: 180, image: AssetImage('assets/images/man.png')),
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
@@ -73,22 +74,22 @@ class _VideoCallState extends State<VideoCall> {
                         onTap: () {},
                         icon: const Icon(
                           Icons.volume_up_outlined,
-                          color: Color(0xffACACAC),
+                          color: AppColors.grayAC,
                         )),
                     IconContainer(
                         height: 80,
                         width: 80,
                         iconSize: 30,
-                        color: Color(0xff934C93),
+                        color: AppColors.primaryColor,
                         onTap: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => MessageScreen()));
+                                  builder: (context) => const MessageScreen()));
                         },
                         icon: const Icon(
                           Icons.call_end_outlined,
-                          color: Colors.white,
+                          color: AppColors.white,
                         )),
                     IconContainer(
                         height: 60,
@@ -98,7 +99,7 @@ class _VideoCallState extends State<VideoCall> {
                         onTap: () {},
                         icon: const Icon(
                           Icons.mic_off,
-                          color: Color(0xffACACAC),
+                          color: AppColors.grayAC,
                         )),
                   ],
                 ),

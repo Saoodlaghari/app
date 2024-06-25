@@ -1,5 +1,7 @@
 import 'package:app/View/Home%20Screens/home_listtile.dart';
 import 'package:app/View/Login_Screens/payment.dart';
+import 'package:app/utils/colors.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/profile_card.dart';
 import 'package:app/utils/sized_boxtwenty.dart';
@@ -47,23 +49,23 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: InkWell(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => PaymentScreen()));
+                MaterialPageRoute(builder: (context) => const PaymentScreen()));
           },
           child: const Icon(
             CupertinoIcons.back,
-            color: Color(0xffACACAC),
+            color: AppColors.grayAC,
           ),
         ),
         actions: const [
           Icon(
             CupertinoIcons.bell,
-            color: Color(0xffFDB813),
+            color: AppColors.customIconColor,
           ),
           Padding(
             padding: EdgeInsets.only(left: 5, right: 15),
             child: Icon(
               Icons.menu,
-              color: Color(0xffFDB813),
+              color: AppColors.customIconColor,
             ),
           )
         ],
@@ -71,11 +73,11 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         height: double.maxFinite,
         width: double.maxFinite,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.cover, image: AssetImage('assets/images/bg.png'))),
+                fit: BoxFit.cover, image: AssetImage(Images.customBgImg))),
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -86,14 +88,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   const Text(
                     'New Matches',
-                    style: TextStyle(fontSize: 14, color: Color(0xff5E5E5E)),
+                    style: TextStyle(fontSize: 14, color: AppColors.gray5E),
                   ),
                   const Spacer(),
                   TextButton(
                       onPressed: () {},
                       child: const Text('See All',
                           style: TextStyle(
-                              fontSize: 14, color: Color(0xff934C93)))),
+                              fontSize: 14, color: AppColors.primaryColor))),
                   const Icon(
                     Icons.arrow_forward,
                     weight: 2,
@@ -178,14 +180,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       }),
                 ),
               )
-              // for (int i = 0; i < name.length; i++)
-              //   Padding(
-              //     padding: const EdgeInsets.only(bottom: 10),
-              //     child: HomeListTile(
-              //         title: name[i],
-              //         subtitle: location[i],
-              //         imageUrl: profileimages[i]),
-              //   )
             ],
           ),
         ),

@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class ChatTile extends StatelessWidget {
@@ -14,13 +15,13 @@ class ChatTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10),
-      decoration: const BoxDecoration(color: Colors.white),
+      decoration: const BoxDecoration(color: AppColors.white),
       child: ListTile(
         title: Text(title,
             style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
-                color: Color(0xff5E5E5E))),
+                color: AppColors.gray5E)),
         subtitle: Text(subtitle,
             style: const TextStyle(
                 fontSize: 12,

@@ -2,6 +2,7 @@ import 'package:app/Controller/payment_screen_controller.dart';
 import 'package:app/View/bottom_nav_bar.dart';
 import 'package:app/utils/button.dart';
 import 'package:app/utils/heading.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/payment_card.dart';
 import 'package:app/utils/sized_boxt.dart';
@@ -23,9 +24,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 30),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover)),
+                image: AssetImage(Images.customBgImg), fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -76,7 +77,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 },
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Button(

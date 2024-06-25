@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class AboutMe extends StatelessWidget {
@@ -21,13 +22,13 @@ class AboutMe extends StatelessWidget {
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Color(0xff934C93),
+              color: AppColors.primaryColor,
             ),
             borderRadius: BorderRadius.circular(50),
           ),
           hintText: text,
           suffixIcon: icon,
-          hintStyle: const TextStyle(fontSize: 16, color: Color(0xffA4A4A4)),
+          hintStyle: const TextStyle(fontSize: 16, color: AppColors.grayA4),
           contentPadding: const EdgeInsets.all(15)),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class NormalText extends StatelessWidget {
@@ -12,9 +13,7 @@ class NormalText extends StatelessWidget {
       textAlign: TextAlign.center,
       text.toString(),
       style: TextStyle(
-          fontSize: font,
-          fontWeight: FontWeight.w400,
-          color: Color(0xffA4A4A4)),
+          fontSize: font, fontWeight: FontWeight.w400, color: AppColors.grayA4),
     ));
   }
 }

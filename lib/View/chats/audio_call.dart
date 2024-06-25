@@ -1,8 +1,9 @@
 import 'package:app/View/chats/message_screen.dart';
 import 'package:app/View/chats/video_call.dart';
+import 'package:app/utils/colors.dart';
 import 'package:app/utils/icon_container_widget.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
-import 'package:app/utils/sized_boxtwenty.dart';
 import 'package:flutter/material.dart';
 
 class Audiocall extends StatefulWidget {
@@ -25,19 +26,21 @@ class _AudiocallState extends State<Audiocall> {
         ),
         leading: IconButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => MessageScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MessageScreen()));
             },
             icon: const Icon(
               Icons.arrow_back_ios_new_sharp,
-              color: Color(0xffACACAC),
+              color: AppColors.grayAC,
             )),
       ),
       body: Container(
         width: double.maxFinite,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.cover, image: AssetImage('assets/images/bg.png'))),
+                fit: BoxFit.cover, image: AssetImage(Images.customBgImg))),
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -55,33 +58,33 @@ class _AudiocallState extends State<Audiocall> {
                     ),
                     Text(
                       'Patricia',
-                      style: TextStyle(fontSize: 28, color: Color(0xff5E5E5E)),
+                      style: TextStyle(fontSize: 28, color: AppColors.gray5E),
                     ),
                     Text(
                       'Calling...',
-                      style: TextStyle(fontSize: 14, color: Color(0xff5E5E5E)),
+                      style: TextStyle(fontSize: 14, color: AppColors.gray5E),
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 250,
                 ),
                 IconContainer(
                     height: 80,
                     width: 80,
                     iconSize: 40,
-                    color: Color(0xff934C93),
+                    color: AppColors.primaryColor,
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => MessageScreen()));
+                              builder: (context) => const MessageScreen()));
                     },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.call_end_outlined,
-                      color: Colors.white,
+                      color: AppColors.white,
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Row(
@@ -91,36 +94,36 @@ class _AudiocallState extends State<Audiocall> {
                         height: 60,
                         width: 60,
                         iconSize: 30,
-                        color: Colors.white,
+                        color: AppColors.white,
                         onTap: () {},
                         icon: const Icon(
                           Icons.volume_up_outlined,
-                          color: Color(0xffACACAC),
+                          color: AppColors.grayAC,
                         )),
                     IconContainer(
                         height: 60,
                         width: 60,
                         iconSize: 30,
-                        color: Colors.white,
+                        color: AppColors.white,
                         onTap: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => VideoCall()));
+                                  builder: (context) => const VideoCall()));
                         },
                         icon: const Icon(
                           Icons.video_call_outlined,
-                          color: Color(0xffACACAC),
+                          color: AppColors.grayAC,
                         )),
                     IconContainer(
                         height: 60,
                         width: 60,
                         iconSize: 30,
-                        color: Colors.white,
+                        color: AppColors.white,
                         onTap: () {},
                         icon: const Icon(
                           Icons.mic_off,
-                          color: Color(0xffACACAC),
+                          color: AppColors.grayAC,
                         )),
                   ],
                 )

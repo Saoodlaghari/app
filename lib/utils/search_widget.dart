@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class SearchWidget extends StatelessWidget {
@@ -12,27 +13,27 @@ class SearchWidget extends StatelessWidget {
         controller: controller,
         decoration: InputDecoration(
             filled: true,
-            fillColor: Colors.white,
+            fillColor: AppColors.white,
             enabledBorder: OutlineInputBorder(
               borderSide: const BorderSide(
-                color: Color(0xffACACAC),
+                color: AppColors.grayAC,
               ),
               borderRadius: BorderRadius.circular(10),
             ),
             focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
-                color: Color(0xffACACAC),
+                color: AppColors.grayAC,
               ),
             ),
             hintText: hintText,
             prefixIcon: const Icon(
               Icons.search,
-              color: Color(0xffACACAC),
+              color: AppColors.grayAC,
             ),
             hintStyle: const TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 17,
-                color: Color(0xffA4A4A4)),
+                color: AppColors.grayAC),
             contentPadding: const EdgeInsets.all(15)));
   }
 }

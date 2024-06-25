@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class PaymentCard extends StatelessWidget {
@@ -23,7 +24,7 @@ class PaymentCard extends StatelessWidget {
       child: Container(
         height: 130,
         decoration: BoxDecoration(
-            color: isSelected ? Color(0xff934C93) : Color(0xffF0F0F0),
+            color: isSelected ? AppColors.primaryColor : Color(0xffF0F0F0),
             borderRadius: BorderRadius.circular(15),
             boxShadow: const [
               BoxShadow(
@@ -46,7 +47,8 @@ class PaymentCard extends StatelessWidget {
                     title,
                     style: TextStyle(
                         fontSize: 24,
-                        color: isSelected ? Colors.white : Color(0xff934C93)),
+                        color:
+                            isSelected ? Colors.white : AppColors.primaryColor),
                   ),
                   Text(
                     subtitle,
@@ -56,8 +58,8 @@ class PaymentCard extends StatelessWidget {
                   ),
                   Text(
                     price,
-                    style:
-                        const TextStyle(fontSize: 18, color: Color(0xffFDB813)),
+                    style: const TextStyle(
+                        fontSize: 18, color: AppColors.customIconColor),
                   )
                 ],
               ),
@@ -71,13 +73,13 @@ class PaymentCard extends StatelessWidget {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Colors.white,
-                      border: Border.all(color: const Color(0xffFDB813))),
+                      border: Border.all(color: AppColors.customIconColor)),
                   child: isSelected
                       ? const Center(
                           child: Icon(
                             Icons.check,
                             size: 45,
-                            color: Color(0xff934C93),
+                            color: AppColors.primaryColor,
                           ),
                         )
                       : null,

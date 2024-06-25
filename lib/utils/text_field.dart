@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -14,7 +15,7 @@ class MyTextFiled extends StatelessWidget {
         decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(
               borderSide: const BorderSide(
-                color: Color(0xff934C93),
+                color: AppColors.primaryColor,
               ),
               borderRadius: BorderRadius.circular(32),
             ),
@@ -29,7 +30,7 @@ class MyTextFiled extends StatelessWidget {
             hintStyle: const TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 17,
-                color: Color(0xffA4A4A4)),
+                color: AppColors.grayA4),
             contentPadding: const EdgeInsets.all(15)));
   }
 }

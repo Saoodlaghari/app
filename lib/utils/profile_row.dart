@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class ProfileRow extends StatelessWidget {
@@ -15,7 +16,7 @@ class ProfileRow extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(fontSize: 12, color: Color(0xffACACAC)),
+          style: const TextStyle(fontSize: 12, color: AppColors.grayAC),
         )
       ],
     );

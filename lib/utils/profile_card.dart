@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {
@@ -35,8 +36,8 @@ class ProfileCard extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(
-                    color: Colors.white,
+                  style: const TextStyle(
+                    color: AppColors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     shadows: [
@@ -50,7 +51,7 @@ class ProfileCard extends StatelessWidget {
                 ),
                 Text(
                   subtitle,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 14,
                     shadows: [
@@ -71,7 +72,7 @@ class ProfileCard extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.8),
+                color: AppColors.white.withOpacity(0.8),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(

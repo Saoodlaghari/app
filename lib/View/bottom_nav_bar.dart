@@ -3,6 +3,7 @@ import 'package:app/View/Home%20Screens/favorite.dart';
 import 'package:app/View/chats/chat.dart';
 import 'package:app/View/Home%20Screens/home_screen.dart';
 import 'package:app/View/Home%20Screens/profile_screen.dart';
+import 'package:app/utils/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,12 @@ class Dashboard extends StatefulWidget {
   State<Dashboard> createState() => _DashboardState();
 }
 
-final screens = [HomeScreen(), ChatScreen(), FavoriteScreen(), ProfileScreen()];
+final screens = [
+  const HomeScreen(),
+  const ChatScreen(),
+  const FavoriteScreen(),
+  const ProfileScreen()
+];
 
 class _DashboardState extends State<Dashboard> {
   final DashBoardController controller = Get.put(DashBoardController());
@@ -31,8 +37,8 @@ class _DashboardState extends State<Dashboard> {
                 iconSize: 30,
                 backgroundColor: Colors.white,
                 type: BottomNavigationBarType.fixed,
-                selectedItemColor: Color(0xff934C93),
-                unselectedItemColor: Color(0xffACACAC),
+                selectedItemColor: AppColors.primaryColor,
+                unselectedItemColor: AppColors.grayAC,
                 showSelectedLabels: true,
                 showUnselectedLabels: false,
                 onTap: (index) {

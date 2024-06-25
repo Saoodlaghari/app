@@ -1,6 +1,8 @@
 import 'package:app/View/Login_Screens/payment.dart';
 import 'package:app/utils/about_me.dart';
 import 'package:app/utils/button.dart';
+import 'package:app/utils/colors.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/sized_boxt.dart';
 import 'package:app/utils/profile_text.dart';
 import 'package:app/utils/profile_textfield.dart';
@@ -31,10 +33,9 @@ class _ProfileState extends State<Profile> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/bg.png'))),
+                  fit: BoxFit.cover, image: AssetImage(Images.customBgImg))),
           child: Column(
             children: [
               //First child Background image
@@ -66,9 +67,9 @@ class _ProfileState extends State<Profile> {
                     ProfileTextField(
                       controller: nameController,
                       text: 'Your Email',
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.person,
-                        color: Color(0xffFDB813),
+                        color: AppColors.customIconColor,
                       ),
                     ),
                     //second text field for birthday
@@ -99,7 +100,7 @@ class _ProfileState extends State<Profile> {
                         text: 'Jakarta, Indonesia',
                         icon: const Icon(
                           Icons.location_on,
-                          color: Color(0xffFDB813),
+                          color: AppColors.customIconColor,
                         )),
                     //6th text field for job
                     const SizedBoxTwenty(),
@@ -112,7 +113,7 @@ class _ProfileState extends State<Profile> {
                         text: 'Graphic Designer',
                         icon: const Icon(
                           Icons.shopping_bag_outlined,
-                          color: Color(0xffFDB813),
+                          color: AppColors.customIconColor,
                         )),
                     //7th text field for Company
                     const SizedBoxTwenty(),
@@ -125,7 +126,7 @@ class _ProfileState extends State<Profile> {
                         text: 'Design Center',
                         icon: const Icon(
                           Icons.other_houses_outlined,
-                          color: Color(0xffFDB813),
+                          color: AppColors.customIconColor,
                         )),
                     //8th for college
                     const SizedBoxTwenty(),
@@ -162,7 +163,7 @@ class _ProfileState extends State<Profile> {
                         text: 'Interest',
                         icon: const Icon(
                           Icons.add_box_outlined,
-                          color: Color(0xff934C93),
+                          color: AppColors.primaryColor,
                         )),
                     const SizedBoxT(),
                     const Row(
@@ -194,7 +195,7 @@ class _ProfileState extends State<Profile> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => PaymentScreen()));
+                                  builder: (context) => const PaymentScreen()));
                         }),
                     const SizedBoxTwenty()
                   ],

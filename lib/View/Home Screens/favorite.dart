@@ -1,4 +1,6 @@
 import 'package:app/utils/chattile_for_fav.dart';
+import 'package:app/utils/colors.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/search_widget.dart';
 import 'package:app/utils/sized_boxtwenty.dart';
@@ -56,18 +58,18 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
         ),
         leading: const Icon(
           CupertinoIcons.back,
-          color: Color(0xffACACAC),
+          color: AppColors.grayA4,
         ),
         actions: const [
           Icon(
             CupertinoIcons.bell,
-            color: Color(0xffFDB813),
+            color: AppColors.customIconColor,
           ),
           Padding(
             padding: EdgeInsets.only(left: 5, right: 15),
             child: Icon(
               Icons.menu,
-              color: Color(0xffFDB813),
+              color: AppColors.customIconColor,
             ),
           )
         ],
@@ -75,9 +77,9 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
       body: Container(
         height: double.maxFinite,
         width: double.maxFinite,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.cover, image: AssetImage('assets/images/bg.png'))),
+                fit: BoxFit.cover, image: AssetImage(Images.customBgImg))),
         child: SafeArea(
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 20),

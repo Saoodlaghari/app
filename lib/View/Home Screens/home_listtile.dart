@@ -15,14 +15,14 @@ class HomeListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10)),
       child: ListTile(
         leading: Image(image: AssetImage(imageUrl)),
         title: Text(title),
         subtitle: Text(subtitle),
-        trailing: Icon(Icons.favorite),
+        trailing: const Icon(Icons.favorite),
       ),
     );
   }

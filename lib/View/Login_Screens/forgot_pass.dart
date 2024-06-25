@@ -1,7 +1,9 @@
 import 'package:app/View/Login_Screens/sign_in.dart';
 import 'package:app/View/Login_Screens/verify.dart';
 import 'package:app/utils/button.dart';
+import 'package:app/utils/colors.dart';
 import 'package:app/utils/heading.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/text_field.dart';
 import 'package:flutter/material.dart';
@@ -21,19 +23,18 @@ class _ForgotPassState extends State<ForgotPass> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/bg.png'), fit: BoxFit.cover)),
+                image: AssetImage(Images.customBgImg), fit: BoxFit.cover)),
         child: Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              const Center(
-                child: Image(
-                    width: 155, image: AssetImage('assets/images/logo.png')),
+              Center(
+                child: Image(width: 155, image: AssetImage(Images.customLogo)),
               ),
               const SizedBox(
                 height: 40,
@@ -57,7 +58,7 @@ class _ForgotPassState extends State<ForgotPass> {
                       style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xffA4A4A4))),
+                          color: AppColors.grayA4)),
                   TextButton(
                       onPressed: () {
                         Navigator.push(
@@ -68,7 +69,7 @@ class _ForgotPassState extends State<ForgotPass> {
                       child: const Text("Sign in",
                           style: TextStyle(
                               fontSize: 14,
-                              color: Color(0xff934C93),
+                              color: AppColors.primaryColor,
                               fontWeight: FontWeight.bold))),
                 ],
               ),

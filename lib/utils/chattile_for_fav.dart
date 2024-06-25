@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class FavChatTile extends StatelessWidget {
@@ -18,7 +19,7 @@ class FavChatTile extends StatelessWidget {
               style: const TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
-                  color: Color(0xff5E5E5E))),
+                  color: AppColors.gray5E)),
           subtitle: Text(subtitle,
               style: const TextStyle(
                   fontSize: 12,
@@ -31,9 +32,9 @@ class FavChatTile extends StatelessWidget {
           trailing: Container(
             height: 40,
             width: 40,
-            decoration:
-                BoxDecoration(color: Color(0xff934C93), shape: BoxShape.circle),
-            child: Icon(
+            decoration: const BoxDecoration(
+                color: AppColors.primaryColor, shape: BoxShape.circle),
+            child: const Icon(
               Icons.favorite_border,
               color: Colors.white,
               size: 25,

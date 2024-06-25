@@ -1,4 +1,6 @@
+import 'package:app/utils/colors.dart';
 import 'package:app/utils/gallery.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/profile_row.dart';
 import 'package:app/utils/sized_boxt.dart';
@@ -37,14 +39,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         leading: const Icon(
           CupertinoIcons.back,
-          color: Color(0xffACACAC),
+          color: AppColors.grayAC,
         ),
         actions: const [
           Padding(
             padding: EdgeInsets.only(left: 5, right: 15),
             child: Icon(
               Icons.menu,
-              color: Color(0xffFDB813),
+              color: AppColors.customIconColor,
             ),
           )
         ],
@@ -52,12 +54,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: Container(
         height: double.maxFinite,
         width: double.maxFinite,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.cover, image: AssetImage('assets/images/bg.png'))),
+                fit: BoxFit.cover, image: AssetImage(Images.customBgImg))),
         child: SafeArea(
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 40),
+            padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -73,7 +75,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     'Brian Immanual,24',
                     style: TextStyle(
                         fontSize: 20,
-                        color: Color(0xff5E5E5E),
+                        color: AppColors.gray5E,
                         fontWeight: FontWeight.w500),
                   ),
                 ),
@@ -84,20 +86,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     width: 120,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: Color(0xff934C93))),
+                        border: Border.all(color: AppColors.primaryColor)),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(
                           Icons.favorite_outline,
-                          color: Color(0xff934C93),
+                          color: AppColors.primaryColor,
                         ),
                         SizedBox(
                           width: 10,
                         ),
                         Text(
                           '10 K',
-                          style: TextStyle(color: Color(0xff934C93)),
+                          style: TextStyle(color: AppColors.primaryColor),
                         )
                       ],
                     ),
@@ -113,14 +115,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       children: [
                         ProfileRow(
                             icon: Icon(Icons.shopping_bag_outlined,
-                                color: Color(0xff934C93)),
+                                color: AppColors.primaryColor),
                             text: 'Graphic Designer'),
                         SizedBox(
                           height: 15,
                         ),
                         ProfileRow(
                             icon: Icon(Icons.shopping_bag_outlined,
-                                color: Color(0xff934C93)),
+                                color: AppColors.primaryColor),
                             text: 'Graphic Designer'),
                       ],
                     ),
@@ -138,7 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ProfileRow(
                           icon: Icon(
                             Icons.shopping_bag_outlined,
-                            color: Color(0xff934C93),
+                            color: AppColors.primaryColor,
                           ),
                           text: 'Graphic Designer',
                         ),
@@ -149,14 +151,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const SizedBoxTwenty(),
                 const Text(
                   'About me',
-                  style: TextStyle(fontSize: 14, color: Color(0xff5E5E5E)),
+                  style: TextStyle(fontSize: 14, color: AppColors.gray5E),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 const Text(
                   'I\'m here when you need a sunny day,something good. We can sing together on the beach and burn bonfires at night with the moonlight. See you under the night sky !',
-                  style: TextStyle(color: Color(0xffACACAC), fontSize: 12),
+                  style: TextStyle(color: AppColors.grayAC, fontSize: 12),
                 ),
                 const SizedBoxT(),
                 Row(
@@ -165,7 +167,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       'Gallery',
                       style: TextStyle(
                           fontSize: 14,
-                          color: Color(0xff5E5E5E),
+                          color: AppColors.gray5E,
                           fontWeight: FontWeight.w700),
                     ),
                     const Spacer(),
@@ -173,11 +175,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         onPressed: () {},
                         child: const Text('See All',
                             style: TextStyle(
-                                fontSize: 14, color: Color(0xff934C93)))),
+                                fontSize: 14, color: AppColors.primaryColor))),
                     const Icon(
                       Icons.arrow_forward,
                       weight: 2,
-                      color: Color(0xff934C93),
+                      color: AppColors.primaryColor,
                     )
                   ],
                 ),

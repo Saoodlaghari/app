@@ -1,3 +1,4 @@
+import 'package:app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class ProfileTextField extends StatelessWidget {
@@ -13,19 +14,19 @@ class ProfileTextField extends StatelessWidget {
       decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Color(0xffACACAC),
+              color: AppColors.grayAC,
             ),
             borderRadius: BorderRadius.circular(50),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Color(0xff934C93),
+              color: AppColors.primaryColor,
             ),
             borderRadius: BorderRadius.circular(50),
           ),
           hintText: text,
           suffixIcon: icon,
-          hintStyle: const TextStyle(fontSize: 16, color: Color(0xffA4A4A4)),
+          hintStyle: const TextStyle(fontSize: 16, color: AppColors.grayA4),
           contentPadding: const EdgeInsets.all(15)),
     );
   }

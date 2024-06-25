@@ -1,7 +1,8 @@
 import 'package:app/View/chats/audio_call.dart';
-import 'package:app/View/chats/chat.dart';
 import 'package:app/View/chats/video_call.dart';
+import 'package:app/utils/colors.dart';
 import 'package:app/utils/icon_container_widget.dart';
+import 'package:app/utils/images.dart';
 import 'package:app/utils/sized_boxt.dart';
 import 'package:app/utils/sized_boxtwenty.dart';
 import 'package:flutter/cupertino.dart';
@@ -38,7 +39,7 @@ class _MessageScreenState extends State<MessageScreen> {
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xff5E5E5E)),
+                        color: AppColors.gray5E),
                   ),
                   SizedBox(
                     height: 5,
@@ -48,7 +49,7 @@ class _MessageScreenState extends State<MessageScreen> {
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w400,
-                        color: Color(0xff5E5E5E)),
+                        color: AppColors.gray5E),
                   )
                 ],
               ),
@@ -58,40 +59,43 @@ class _MessageScreenState extends State<MessageScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(Icons.arrow_back_ios_new_sharp)),
+              icon: const Icon(Icons.arrow_back_ios_new_sharp)),
           actions: [
             IconButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Audiocall()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Audiocall()));
                 },
                 icon: const Icon(
                   Icons.call_outlined,
-                  color: Color(0xffFDB813),
+                  color: AppColors.customIconColor,
                   size: 30,
                 )),
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => VideoCall()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const VideoCall()));
                   },
                   icon: const Icon(
                     Icons.video_call_outlined,
-                    color: Color(0xffFDB813),
+                    color: AppColors.customIconColor,
                     size: 30,
                   )),
             ),
           ],
         ),
         body: Container(
-          decoration: const BoxDecoration(
+          decoration: BoxDecoration(
               image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage('assets/images/bg.png'))),
+                  fit: BoxFit.cover, image: AssetImage(Images.customBgImg))),
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 30),
+            padding: const EdgeInsets.symmetric(horizontal: 30),
             height: double.maxFinite,
             width: double.infinity,
             child: Column(children: [
@@ -114,21 +118,21 @@ class _MessageScreenState extends State<MessageScreen> {
                                 onPressed: () {},
                                 icon: const Icon(
                                   Icons.camera_alt_outlined,
-                                  color: Color(0xffACACAC),
+                                  color: AppColors.grayAC,
                                   size: 30,
                                 )),
                             hintStyle: const TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 17,
-                                color: Color(0xffA4A4A4)),
+                                color: AppColors.grayA4),
                             contentPadding: const EdgeInsets.all(15))),
                   ),
-                  SizedBoxT(),
+                  const SizedBoxT(),
                   IconContainer(
                       height: 60,
                       width: 60,
                       iconSize: 40,
-                      color: Color(0xff934C93),
+                      color: AppColors.primaryColor,
                       onTap: () {},
                       icon: const Icon(
                         Icons.send_outlined,
@@ -136,13 +140,9 @@ class _MessageScreenState extends State<MessageScreen> {
                       ))
                 ],
               ),
-              SizedBoxTwenty()
+              const SizedBoxTwenty()
             ]),
           ),
         ));
   }
 }
-// const ListTile(
-              // title: Text('Lorem '),
-              // subtitle: Text('online'),
-              // leading: Image(image: AssetImage('assets/images/profile 1.png'))),
