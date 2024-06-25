@@ -2,7 +2,6 @@ import 'package:app/View/Home%20Screens/home_listtile.dart';
 import 'package:app/View/Login_Screens/payment.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/profile_card.dart';
-import 'package:app/utils/sized_boxt.dart';
 import 'package:app/utils/sized_boxtwenty.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -75,8 +74,8 @@ class _HomeScreenState extends State<HomeScreen> {
         decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover, image: AssetImage('assets/images/bg.png'))),
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.only(left: 20, right: 10),
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -163,14 +162,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
               const SizedBoxTwenty(),
-              for (int i = 0; i < name.length; i++)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 10),
-                  child: HomeListTile(
-                      title: name[i],
-                      subtitle: location[i],
-                      imageUrl: profileimages[i]),
-                )
+              Expanded(
+                child: Container(
+                  child: ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: titles.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 5),
+                          child: HomeListTile(
+                              imageUrl: profileimages[index],
+                              title: titles[index],
+                              subtitle: subTitles[index]),
+                        );
+                      }),
+                ),
+              )
+              // for (int i = 0; i < name.length; i++)
+              //   Padding(
+              //     padding: const EdgeInsets.only(bottom: 10),
+              //     child: HomeListTile(
+              //         title: name[i],
+              //         subtitle: location[i],
+              //         imageUrl: profileimages[i]),
+              //   )
             ],
           ),
         ),

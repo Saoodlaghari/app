@@ -1,6 +1,6 @@
 import 'package:app/View/Login_Screens/forgot_pass.dart';
-import 'package:app/View/Login_Screens/profile.dart';
 import 'package:app/View/Login_Screens/sign_up.dart';
+import 'package:app/View/bottom_nav_bar.dart';
 import 'package:app/utils/button.dart';
 import 'package:app/utils/heading.dart';
 import 'package:app/utils/normal_txt.dart';
@@ -84,8 +84,10 @@ class _SignInState extends State<SignIn> {
                 text: 'Sign in',
                 width: 300,
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => const Profile()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Dashboard()));
                 },
               ),
               Row(

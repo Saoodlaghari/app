@@ -1,6 +1,6 @@
 import 'package:app/Controller/bottom_navigation_controller.dart';
-import 'package:app/View/Home%20Screens/chat.dart';
 import 'package:app/View/Home%20Screens/favorite.dart';
+import 'package:app/View/chats/chat.dart';
 import 'package:app/View/Home%20Screens/home_screen.dart';
 import 'package:app/View/Home%20Screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';

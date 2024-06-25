@@ -1,5 +1,5 @@
 import 'package:app/Controller/payment_screen_controller.dart';
-import 'package:app/bottom_nav_bar.dart';
+import 'package:app/View/bottom_nav_bar.dart';
 import 'package:app/utils/button.dart';
 import 'package:app/utils/heading.dart';
 import 'package:app/utils/normal_txt.dart';
