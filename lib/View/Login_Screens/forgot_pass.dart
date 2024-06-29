@@ -1,3 +1,4 @@
+import 'package:app/Controller/forgot_pass_controller.dart';
 import 'package:app/View/Login_Screens/sign_in.dart';
 import 'package:app/View/Login_Screens/verify.dart';
 import 'package:app/utils/button.dart';
@@ -7,6 +8,7 @@ import 'package:app/utils/images.dart';
 import 'package:app/utils/normal_txt.dart';
 import 'package:app/utils/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ForgotPass extends StatefulWidget {
   const ForgotPass({super.key});
@@ -16,7 +18,7 @@ class ForgotPass extends StatefulWidget {
 }
 
 class _ForgotPassState extends State<ForgotPass> {
-  final TextEditingController emailController = TextEditingController();
+  final ForgotPassController controller = Get.put(ForgotPassController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,9 +49,20 @@ class _ForgotPassState extends State<ForgotPass> {
               const SizedBox(
                 height: 40,
               ),
-              MyTextFiled(
-                hintText: 'saoodlaghari1@gmail.com',
-                controller: emailController,
+              Form(
+                key: controller.formKey,
+                child: MyTextFiled(
+                    keyBoardType: TextInputType.emailAddress,
+                    obsecure: false,
+                    hintText: 'saoodlaghari1@gmail.com',
+                    controller: controller.emailController,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'enter email';
+                      } else {
+                        return null;
+                      }
+                    }),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -80,10 +93,13 @@ class _ForgotPassState extends State<ForgotPass> {
                   text: 'Reset password',
                   width: 300,
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Verify()));
+                    if (controller.formKey.currentState!.validate()) {
+                      controller.ResetPass();
+                    }
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //         builder: (context) => const Verify()));
                   })
             ],
           ),

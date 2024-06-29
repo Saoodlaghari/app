@@ -4,13 +4,25 @@ import 'package:flutter/widgets.dart';
 
 class MyTextFiled extends StatelessWidget {
   const MyTextFiled(
-      {super.key, required this.hintText, this.icon, required this.controller});
+      {super.key,
+      required this.hintText,
+      this.icon,
+      required this.controller,
+      required this.keyBoardType,
+      required this.obsecure,
+      this.validator});
   final String hintText;
   final Icon? icon;
   final TextEditingController controller;
+  final TextInputType keyBoardType;
+  final bool obsecure;
+  final FormFieldValidator<String>? validator;
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+        validator: validator,
+        keyboardType: keyBoardType,
+        obscureText: obsecure,
         controller: controller,
         decoration: InputDecoration(
             enabledBorder: OutlineInputBorder(

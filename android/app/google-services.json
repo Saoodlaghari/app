@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "471505102847",
+    "project_id": "empowered-dating-app-e503a",
+    "storage_bucket": "empowered-dating-app-e503a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471505102847:android:905c82f106ba19684329ca",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMbi2nA8-4UlZuxJpMWLiRofa22SBrr-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

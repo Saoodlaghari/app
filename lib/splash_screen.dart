@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:app/View/Login_Screens/sign_in.dart';
+import 'package:app/utils/images.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -25,15 +26,14 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         height: double.infinity,
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/spBg.png'),
-                fit: BoxFit.cover)),
-        child: const Center(
+                image: AssetImage(Images.customSpBgImg), fit: BoxFit.cover)),
+        child: Center(
             child: Image(
                 width: 279,
                 height: 232,
-                image: AssetImage('assets/images/spLogo.png'))),
+                image: AssetImage(Images.customSpLogo))),
       ),
     );
   }

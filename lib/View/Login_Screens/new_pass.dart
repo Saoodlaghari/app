@@ -50,6 +50,8 @@ class _NewPassState extends State<NewPass> {
                 height: 40,
               ),
               MyTextFiled(
+                  keyBoardType: TextInputType.visiblePassword,
+                  obsecure: true,
                   hintText: 'New Password',
                   controller: confirmNewPassController,
                   icon: const Icon(Icons.visibility_off_outlined)),
@@ -57,6 +59,8 @@ class _NewPassState extends State<NewPass> {
                 height: 10,
               ),
               MyTextFiled(
+                keyBoardType: TextInputType.visiblePassword,
+                obsecure: true,
                 hintText: 'Confirm Your Password',
                 controller: newPassController,
                 icon: const Icon(Icons.visibility_off_outlined),
